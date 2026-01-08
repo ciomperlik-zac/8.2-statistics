@@ -24,6 +24,8 @@ class Main {
             while (scan.hasNextInt()) {
                 nums.add(scan.nextInt());
             }
+
+            scan.close();
         } catch (FileNotFoundException e) {
             System.out.println(String.format("The selected file [%s] cannot be found!", file.getAbsolutePath()));
             return;
