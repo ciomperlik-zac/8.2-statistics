@@ -16,15 +16,14 @@ class Main {
             // use a while loop to read each integer from the file and add it to the ArrayList
 
             // handle the FileNotFoundException if the file is not found
-
         File file = new File("numbers.txt");
 
         try {
-        Scanner scan = new Scanner(file); 
+            Scanner scan = new Scanner(file); 
 
-        while (scan.hasNextInt()) {
-            nums.add(scan.nextInt());
-        }
+            while (scan.hasNextInt()) {
+                nums.add(scan.nextInt());
+            }
         } catch (FileNotFoundException e) {
             System.out.println(String.format("The selected file [%s] cannot be found!", file.getAbsolutePath()));
             return;
